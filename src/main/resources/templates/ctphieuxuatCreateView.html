@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <title>Quản lý hàng hóa - Cửa hàng vật tư, phân bón nông nghiệp</title>
+    <link rel="stylesheet" th:href="@{/style/style.css}">
+</head>
+<body>
+
+<div class="container">
+  			<header>
+    			<div class="header1">
+    				<a href="#"><img th:src="@{/img/download14.png}"  alt="logo"> </a>
+  				</div>
+  				<div class="header2">
+    				<ul>
+				      <a href="#"><img th:src="@{/img/facebook.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/instagram.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/youtube.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/twitter.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+    				</ul>   
+  				</div>
+  			</header>
+  			<nav>
+    			<div class="menu">
+      				<ul>
+				        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+				        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+				        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+				        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+				        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+				        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+				        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+     				</ul>
+    			</div>
+    			<div class="search">
+      				<input type="search" placeholder="Search">
+      				<button>Tìm kiếm</button>
+    			</div>  
+  			</nav>
+  			<div id="main-content">
+  			<div class="dangxuat">
+          <ul>
+          <li><a th:href="@{/logout}"> Đăng xuất</a></li>  
+  			  <li><p><span th:text="${username}"></span>,</p></li>
+          
+          </ul>
+  			</div>
+        		<div class="tieude">
+        			<h1>THÊM MỚI CHI TIẾT PHIẾU XUẤT</h1>
+        		</div>
+        		<div class="form">
+        			<form th:action="@{/ctphieuxuat/add}" method="post"	th:ojbect="@{ctphieuxuat}">
+        				<input type="hidden" name="maphieuxuat" th:value="${maphieuxuat}">
+          					<ul>                   
+          						<li><p style="color:red;">Mã phiếu xuất:  <span th:text="${maphieuxuat}"></span></p></li>                         
+          						<li><p>Hàng hóa</p></li>
+								<li><select name="mahanghoa" id="mahanghoa">
+					          	<option th:each="hanghoa:${hanghoa}" th:value="${hanghoa.mahh}" th:text="${hanghoa.tenhh}">
+					          	</option>
+					          	 
+					          	</select></li>   
+						</ul>
+						<ul>
+					          	<li><input type="hidden" name="tenhh" th:value="1"/> </li>     
+					          	<li><p>Số lượng</p></li>
+					          	<li><input type="text" name="soluong" > </li> 
+    					                 
+								<li><input type="hidden" name="dongia" th:value="1"/> </li>
+								<li><p style="color:red;"><span th:text="${msg}"></span></p></li>  
+					        </ul>      
+          					<ul style=" margin-top: 10px;">
+						          <li style="float: left;">
+						          <input type="submit" value="Luu" style="height:38px 
+						          ;width: 200px;background-color:rgb(8, 101, 59);color: aliceblue; ">
+						          </li>
+						          <li style="float: left; line-height:38px;margin-left: 50px;
+						           background-color: rgb(8, 101, 59);padding:0px 70px 0px 70px ;">
+						          <a th:href="@{/phieuxuat/add}" >Quay lại</a>
+						          </li>
+          					</ul>                              		    
+          				</form>
+        			</div>    
+  				</div>
+			</div>
+  		<footer>
+    		<div class="fLeft">
+	      		<p>Cửa Hàng Vật Tư Nông Nghiệp</p>
+	      		<p>Địa chỉ: 123 abc, phường X, quận Y, tp.Z<br />
+	      		Điện thoại: 012.3456789</p>
+	      		<p>Email: <a href="mailto:support@hocwebchuan.com">support@vattunongnghiep.com</a></p>
+	      		<!-- / class fLeft --></div>
+	      	<div class="fRight">
+	        	<h3>Danh mục</h3>
+	        	<ul>
+				        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+				        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+				        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+				        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+				        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+				        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+				        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+        		</ul>
+        	</div>         
+  		</footer>
+</html>ml>

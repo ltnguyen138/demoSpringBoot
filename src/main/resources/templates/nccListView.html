@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+   		<title>Quản lý hàng hóa - Cửa hàng vật tư, phân bón nông nghiệp</title>
+    	<link th:href="@{/style/style1.css}" rel="stylesheet"  />
+	</head>
+	<body>
+		<div class="container">
+  			<header>
+    			<div class="header1">
+    				<a href="#"><img th:src="@{/img/download14.png}" alt="logo"> </a>
+  				</div>
+  				<div class="header2">
+    				<ul>
+				      <a href="#"><img th:src="@{/img/facebook.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/instagram.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/youtube.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/twitter.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+    				</ul>  
+  				</div>
+  			</header>
+  			<nav>
+    			<div class="menu">
+      				<ul>
+				        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+				        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+				        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+				        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+				        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+				        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+				        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+      				</ul>
+    			</div>
+   				<div class="search">
+   				<form th:action="@{/ncc/search}" method="get"	>
+      				<input type="text" placeholder="Search" name="search">
+      				<input type="submit" value="Tìm kiếm" >
+      			</form>
+    			</div>
+  			</nav>
+  		<div id="main-content">
+  		<div class="dangxuat">
+          <ul>
+          <li><a th:href="@{/logout}">Đăng xuất</a></li>  
+  			  <li><p><span th:text="${username}"></span>,</p></li>
+          
+          </ul>
+  			</div>
+        	<div class="tieude">
+        		<h1>DANH SÁCH NHÀ CUNG CẤP</h1>
+        	</div>
+        	<div class="list">            
+				<div class="themmoi">
+					<a  th:href="@{/ncc/add}" >Thêm mới</a>
+				</div>
+				<table class="table">				
+					<tr>
+						<th>Mã số</th>
+						<th>Tên nhà cung cấp </th>
+						<th>Email </th>
+						<th>Địa chỉ </th>
+						<th>Số điện thoại</th>
+					</tr>									
+					
+					<tr th:each="ncc :${ncc}">
+						<td th:text="${ncc.mancc}"> </td>
+						<td th:text="${ncc.tenncc}"></td>
+						<td th:text="${ncc.emailncc}"></td>
+						<td th:text="${ncc.diachincc}"></td>
+						<td th:text="${ncc.sdtncc}"></td>
+						<td><a th:href="@{/ncc/edit/{mancc}(mancc=${ncc.mancc})}">Sửa</a> </td>
+						<td><a th:href="@{/ncc/delete/{mancc}(mancc=${ncc.mancc})}">Xóa</a> </td>
+					</tr>                     
+			
+				
+				</table>
+        	</div>     
+  		</div>
+	</div>
+	<footer>
+    	<div class="fLeft">
+		     <p>Cua Hang Vat Tu Nong Nghiep</p>
+		     <p>Địa chỉ: 123 abc, phường X, quận Y, tp.Z<br />
+		     Điện thoại: 012.3456789</p>
+		     <p>Email: <a href="mailto:support@hocwebchuan.com">support@vattunongnghiep.com</a></p>
+		</div>
+		<div class="fRight">
+        	<h3>Danh muc</h3>
+        	<ul>
+		        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+		        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+		        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+		        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+		        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+		        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+		        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+		    </ul>
+       </div>   
+	</footer>
+</body>
+</html>

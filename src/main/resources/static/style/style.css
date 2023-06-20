@@ -1,0 +1,180 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto",sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  
+  background-color: antiquewhite;
+  width: 1800px;
+  min-height: 1000px;
+  margin: 0 auto;
+  
+}
+select{
+	font-size: 22px;
+	height: 45px;
+	width: 600px
+}
+header{
+  display: flex;
+  width: 1800px;
+  height: 150px;
+  background: #ffffff;
+}
+header img{
+  padding-left: 40px;
+}
+header .header1{
+  flex-basis: 50%;
+}
+
+header .header2{
+  flex-basis: 50%;
+}
+header .header2 ul {
+  margin: 50px 20px 20px 280px;
+}
+nav{
+  height: 44px;
+  background-color: rgb(8, 101, 59);
+}
+nav .menu ul{
+  list-style: none;
+  padding-left: 100px;
+}
+nav .menu ul li {
+  float: left;
+  line-height: 40px;
+  padding: 0px 15px;
+}
+
+nav .menu ul li a{
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+}
+nav .search{
+  line-height:40px ;
+  float: right;
+  margin-right: 25px;
+}
+nav .search input{
+  padding: 6px 14px;
+}
+nav .search button{
+  padding: 6px 14px;
+}
+#main-content{
+  width: 1800px;
+  padding: 10px;
+  padding-bottom: 60;
+  min-height: 900px;
+ 
+  background-color: #f4fae2;
+}
+.container #main-content .dangxuat{
+margin-top:5px ;
+margin-bottom:50px ;
+margin-right: 20px; 
+}
+#main-content .dangxuat ul{
+  
+  list-style: none;
+  }
+  #main-content .dangxuat ul li{
+    float: right;
+    padding:6px 0px 6px 20px ;
+    
+    color: #151414;
+    font-size: 22px;
+    }
+.dangxuat ul li a{
+  text-decoration: none;
+      color: black;
+      font-size: 22px;
+      background-color: rgb(29, 195, 131);
+      padding:6px 50px 6px 50px ;
+      }
+.dangxuat ul li a:hover{
+  background-color: aqua;
+}
+#main-content .tieude{
+  color: rgb(164, 80, 21);
+  align-content: center;
+  margin-top: 25px ;
+  
+}
+#main-content .tieude h1{
+ 
+  text-align: center;
+}
+#main-content .form{
+  
+  background-color: #f4fae2;
+  margin: 40px auto;
+  
+}
+#main-content .form ul  {
+  padding-left: 30%;
+  list-style: none;
+}
+#main-content .form ul li  {
+  
+  margin-top: 15px;
+  text-decoration: none;
+}
+#main-content .form ul li p  {
+  font-size: 24px;
+  text-decoration: none;
+}
+#main-content .form ul li input {
+  font-size: 23px;
+  width: 600px;
+  height: 42px;
+  text-decoration: none;
+}
+#main-content .form ul li a {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+
+ footer{
+  background-color: rgb(8, 101, 59);
+  height: 120px;
+  width: 1800px;
+  text-align: center;
+  display: flex;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 auto;
+}
+footer .fLeft{
+  flex-basis: 50%;
+  padding: 20px;
+}
+footer .fRight{
+  flex-basis: 50%;
+  padding: 20px;
+}
+footer .fLeft a{
+color: #ffffff;
+text-decoration: none;
+}
+footer .fRight ul {
+  padding-left: 100px;
+}
+footer .fRight ul li{
+  float: left;
+  padding: 20px;
+  list-style: none;
+}
+footer .fRight ul li a{
+  color:#ffffff;
+  text-decoration: none;
+
+}

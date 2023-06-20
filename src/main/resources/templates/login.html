@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+<meta charset="UTF-8">
+    <title>Quản lý hàng hóa - Cửa hàng vật tư, phân bón nông nghiệp</title>
+    <link rel="stylesheet" th:href="@{/style/style.css}" >
+</head>
+<body>
+<div class="container">
+  			<header>
+    			<div class="header1">
+    				<a href="#"><img th:src="@{/img/download14.png}" alt="logo"> </a>
+  				</div>
+  				<div class="header2">
+    				<ul>
+				      <a href="#"><img th:src="@{/img/facebook.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/instagram.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/youtube.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+				      <a href="#"><img th:src="@{/img/twitter.png}" alt="logo" style="width: 60px;height: 20px;"> </a>
+    				</ul>   
+  				</div>
+  			</header>
+  			<nav>
+    			<div class="menu">
+      				<ul>
+				        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+				        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+				        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+				        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+				        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+				        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+				        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+     				</ul>
+    			</div>
+    			
+  			</nav>
+  			<div id="main-content">
+        		<div class="tieude">
+        			<h1>ĐĂNG NHẬP</h1>
+        		</div>
+        		<div class="form">
+        			<form th:action="@{/login}" method="post"	>
+        				
+          					<ul>                   
+          						<li><p>Username</p></li>
+          						<li><input type="text" name="username" /> </li>                        
+          						<li><p>Password</p></li>
+					          	<li><input type="password" name="password" /> </li>  
+					          	<li><p style="color:red;" th:text="${errorString}">  </p></li>                        
+					          	 
+					        </ul>      
+          					<ul style=" margin-top: 10px;">
+						          <li style="float: left;">
+						          <input type="submit" value="Đăng nhập" style="height:38px 
+						          ;width: 200px;background-color:rgb(8, 101, 59);color: aliceblue; ">
+						          </li>
+						          <li style="float: left; line-height:38px;margin-left: 50px;
+						           background-color: rgb(8, 101, 59);padding:0px 70px 0px 70px ;">
+						          <a href="Danh-sach-nha-cung-cap" >Quay lại</a>
+						          </li>
+          					</ul>                              		    
+          				</form>
+        			</div>    
+  				</div>
+			</div>
+  		<footer>
+    		<div class="fLeft">
+	      		<p>Cửa hàng vật tư nông nghiệp</p>
+	      		<p>Địa chỉ: 123 abc, phường X, quận Y, tp.Z<br />
+	      		Điện thoại: 012.3456789</p>
+	      		<p>Email: <a href="mailto:support@hocwebchuan.com">support@vattunongnghiep.com</a></p>
+	      		<!-- / class fLeft --></div>
+	      	<div class="fRight">
+	        	<h3>Danh muc</h3>
+	        	<ul>
+				        <li><a th:href="@{/ncc/list}">Nhà cung cấp</a></li>
+				        <li><a th:href="@{/hanghoa/list}">Hàng hóa</a></li>
+				        <li><a th:href="@{/phieunhap/list}">Phiếu nhập</a></li>
+				        <li><a th:href="@{/phieuxuat/list}">Phiếu xuất</a></li>
+				        <li><a th:href="@{/khachhang/list}">Khách hàng</a></li>
+				        <li><a th:href="@{/nhanvien/list}">Nhân viên</a></li>
+				        <li><a th:href="@{/ttcn}">Thông tin cá nhân</a></li>
+        		</ul>
+        	</div>         
+  		</footer>
+</body>
+</html>

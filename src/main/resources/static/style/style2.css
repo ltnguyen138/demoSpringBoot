@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    box-sizing: border-box;
+  }
+  .container{
+    
+    background-color: antiquewhite;
+    width: 1800px;
+    min-height: 1000px;
+    margin: 0 auto;
+    
+  }
+ select{
+	font-size: 22px;
+	height: 30px;
+	width: 400px
+}
+ 
+  header{
+    display: flex;
+    width: 1800px;
+    height: 150px;
+    background: #ffffff;
+  }
+  header img{
+    padding-left: 40px;
+  }
+  header .header1{
+    flex-basis: 50%;
+  }
+  
+  header .header2{
+    flex-basis: 50%;
+  }
+  header .header2 ul {
+    margin: 50px 20px 20px 280px;
+  }
+  nav{
+    height: 44px;
+    background-color: rgb(8, 101, 59);
+  }
+  nav .menu ul{
+    list-style: none;
+    padding-left: 100px;
+  }
+  nav .menu ul li {
+    float: left;
+    line-height: 40px;
+    padding: 0px 15px;
+  }
+  
+  nav .menu ul li a{
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  nav .search{
+    line-height:40px ;
+    float: right;
+    margin-right: 25px;
+  }
+  nav .search input{
+    padding: 6px 14px;
+  }
+  nav .search button{
+    padding: 6px 14px;
+  }
+  #main-content{
+    width: 1800px;
+    padding: 10px;
+    padding-bottom: 60;
+    min-height: 900px;
+   
+    background-color: #f4fae2;
+    
+  }
+  .container #main-content .dangxuat{
+  margin-top:5px ;
+  margin-bottom:20px ;
+  margin-right: 20px; 
+  }
+  #main-content .dangxuat ul{
+    
+    list-style: none;
+    }
+    #main-content .dangxuat ul li{
+      float: right;
+      padding:6px 0px 6px 20px ;
+      
+      color: #151414;
+      font-size: 22px;
+      }
+.phieu {
+min-height: 90px;
+margin-top:5px ;
+margin-bottom:5px ;
+margin-left: 50px; 
+}
+.phieu .phieu1{
+  min-height: 30px;
+  margin-top:7px ;
+  font-size: 22px;
+}
+.luu{
+  margin-left: 450px;
+}
+.luu  ul  {
+  padding-left: 30%;
+  list-style: none;
+}
+.luu ul li  {
+  
+  margin-top: 15px;
+  text-decoration: none;
+}
+.luu ul li p  {
+  font-size: 24px;
+  text-decoration: none;
+}
+.luu ul li input {
+  font-size: 23px;
+  width: 600px;
+  height: 42px;
+  text-decoration: none;
+}
+.luu ul li a {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.thanhtien{
+  margin-right: 390px;
+  margin-bottom: 25px;
+  text-align: right;
+  font-size: 22px;
+  color: red;
+  font-weight: 700;
+}
+.phieu ul {
+    list-style: none;
+    }
+.phieu ul li{
+  float: left;
+  padding-right: 30px;
+  color: #151414;
+      font-size: 22px;
+}
+.phieu ul li input{
+  padding: 2px 14px;
+  font-size: 20px;
+}
+  .dangxuat ul li a{
+    text-decoration: none;
+        color: black;
+        font-size: 22px;
+        background-color: rgb(29, 195, 131);
+        padding:6px 50px 6px 50px ;
+        }
+  .dangxuat ul li a:hover{
+    background-color: aqua;
+  }
+  #main-content .tieude{
+    color: rgb(164, 80, 21);
+    align-content: center;
+    margin-top: 80px ;
+    
+  }
+  #main-content .tieude h1{
+   
+    text-align: center;
+  }
+  #main-content .list{
+    
+    background-color: #f4fae2;
+    margin: 30px auto;
+    
+  }
+  #main-content .list .themmoi  {
+    
+  margin-top:20px ;
+  margin-bottom:20px ;
+  margin-left: 20px;
+  }
+  #main-content .list .themmoi a  {
+        background-color: rgb(29, 195, 131);
+        font-size: 22px;
+        color: #151414;
+        text-decoration: none;
+        padding:6px 50px 6px 50px ;
+  
+  }
+  #main-content .table   {
+    margin: 0 auto;
+  
+  }
+  
+  #main-content table td    {
+    border-top: 1px  solid #343333;
+  }
+  #main-content .table th  {
+    font-size: 22px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+  }
+  #main-content .table tr  {
+    font-size: 22px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+  }
+  #main-content .table td   {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+  }
+  #main-content .table td a  {
+    text-decoration: none;
+    padding-right: 10px;
+    color: blue;
+  }
+   footer{
+    background-color: rgb(8, 101, 59);
+    height: 120px;
+    width: 1800px;
+    text-align: center;
+    display: flex;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  footer .fLeft{
+    flex-basis: 30%;
+    padding: 20px;
+  }
+  footer .fRight{
+    flex-basis: 70%;
+    padding: 20px;
+  }
+  footer .fLeft a{
+  color: #ffffff;
+  text-decoration: none;
+  }
+  footer .fRight ul {
+    padding-left: 100px;
+  }
+  footer .fRight ul li{
+    float: left;
+    padding: 20px;
+    list-style: none;
+  }
+  footer .fRight ul li a{
+    color:#ffffff;
+    text-decoration: none;
+  
+  }
+  
